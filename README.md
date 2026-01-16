@@ -17,6 +17,11 @@ The project follows a standard Data Mining pipeline:
 3.  **Clustering Algorithm**: Used **K-Means Clustering** to segment the data.
 4.  **Optimizing K**: Applied the **Elbow Method** to determine the optimal number of clusters, identifying **K=5** as the ideal number where the Within-Cluster Sum of Squares (WCSS) levels off.
 
+## Feature Insights
+*   **Role of Age**: Bivariate analysis and 3D interactive charts revealed that **Age** plays a minor role in this specific segmentation.
+    *   In the modern era, high yearly income and purchase spending are observed across various age groups, including younger demographics.
+    *   The primary differentiation in these clusters is driven by **Income** and **Spending Score**.
+
 ## Results & Clusters
 The analysis successfully segmented the customers into 5 distinct tiers. Based on the 3D visualization of Income, Spending, and Age, the key segments are:
 
@@ -38,5 +43,14 @@ The analysis successfully segmented the customers into 5 distinct tiers. Based o
 -   **Low Income, Low Spending**:
     -   Conservative spenders with limited budget.
 
+
+## Bonus: Hierarchical Clustering
+To validate the findings, **Hierarchical Clustering** (Ward's Method) was performed.
+- **Dendrogram Analysis**: The dendrogram suggested a natural grouping of **2 to 3 clusters** (based on a cut at y=3.5).
+- **Comparison**: 
+    - **K-Means** found 5 granularity levels (subgroups).
+    - **Hierarchical Clustering** likely grouped these into broader categories (e.g., High Value vs. Low Value).
+    - The K=5 approach from K-Means provides more actionable specific segments for marketing than the broader K=3 from Hierarchical clustering.
+
 ## Conclusion
-The K-Means model with K=5 effectively separates the customer base into actionable groups, allowing for precise business decision-making and personalized customer experiences.
+The K-Means model with K=5 effectively separates the customer base into actionable groups, allowing for precise business decision-making and personalized customer experiences. While Hierarchical Clustering suggests a broader structure (2-3 groups), the 5-cluster model offers better granularity for targeted campaigns.
